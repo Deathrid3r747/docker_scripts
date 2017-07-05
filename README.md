@@ -8,9 +8,13 @@ A bunch of scripts for easily installing and updating docker containers
 - Couchpotato
 - Sabzb
 
+# Prerequisites
+- Docker must be installed and running
+- Git must be installed
+
 # Using files to install containers
 
-- clone this repo to your local maching git clone `https://github.com/Deathrid3r747/docker_scripts`
+- clone this repo to your local maching `git clone https://github.com/Deathrid3r747/docker_scripts`
 - cd to the directory `cd docker_scripts`
 - make file executable `chmod +x *.sh`
 - Using your vavourite editor, edit each of the files and make sure all the volumes (Starting with `-v`) point to the correct paths for your setup
