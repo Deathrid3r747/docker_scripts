@@ -17,7 +17,7 @@ A bunch of scripts for easily installing and updating docker containers
 - clone this repo to your local maching `git clone https://github.com/Deathrid3r747/docker_scripts`
 - cd to the directory `cd docker_scripts`
 - make file executable `chmod +x *.sh`
-- Using your vavourite editor, edit each of the files and make sure all the volumes (Starting with `-v`) point to the correct paths for your setup
+- Using your favourite editor, edit each of the files and make sure all the volumes (Starting with `-v`) point to the correct paths for your setup
 - Save and execute the files
 - You will get a message similar to `Error response from daemon: No such container: `, this is normal and is the part of the script that removes old containers when upgrading
 
