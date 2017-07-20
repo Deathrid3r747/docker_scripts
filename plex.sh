@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 
 docker pull plexinc/pms-docker
-
-if docker ps | grep -q "plexinc/pms-docker"; then
-  echo "Already running latest image"
-else
-  echo "New image pulled"
-  echo "Upgrading container"
-  docker stop plex
-  docker rm plex
  	docker run \
 	 -d \
 	 --name plex \
@@ -30,6 +22,3 @@ else
 	 -v <path/to/transcode/temp>:/transcode \
 	 -v <path/to/media>:/data \
 	 plexinc/pms-docker
-  docker start plex
-fi
-
