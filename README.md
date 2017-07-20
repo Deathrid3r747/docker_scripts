@@ -23,7 +23,6 @@ A bunch of scripts for easily installing and updating docker containers
 ## Plex
 
 - Please see https://github.com/plexinc/pms-docker  to configure the plex script
-- The plex container will automatically update, so no need to use the script to update
 
 # Installing containers
 
