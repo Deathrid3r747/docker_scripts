@@ -11,6 +11,7 @@ else
   docker rm unifi
   docker create \
 	--name=unifi \
+        --restart=always \
 	-v /opt/docker/unifi:/config \
 	-e PGID=0 \
 	-e PUID=0 \
