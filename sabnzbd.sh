@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
+source config.conf
 docker pull linuxserver/sabnzbd
 
-if docker ps | grep -q "linuxserver/sabnzbd"; then
-  echo "Already running latest image"
-else
+#if docker ps | grep -q "linuxserver/sabnzbd"; then
+#  echo "Already running latest image"
+#else
   echo "New image pulled"
   echo "Upgrading container"
   docker stop $SAB_NAME
@@ -24,5 +25,5 @@ else
 	-p $SAB_PORT_SSL:9090 \
 	linuxserver/sabnzbd
   docker start $SAB_NAME
-fi
+#fi
 
