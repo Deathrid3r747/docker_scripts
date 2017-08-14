@@ -13,9 +13,13 @@ else
 	--name=sabnzbd \
 	--privileged \
 	--restart=always \
-	-v /home/Containers/Sabnzbd:/config \
-	-v /home/Media/Download/nzb/complete:/downloads \
-	-v /home/Media/Download/nzb/incomplete:/incomplete-downloads \
+        --net media \
+        --ip 172.18.0.3 \
+        -v /home/Containers/Sabnzbd:/config \
+        -v /drive/ada0:/ada0 \
+        -v /drive/ada1:/ada1 \
+        -v /drive/ada2:/ada2 \
+        -v /drive/ada3:/ada3 \
 	-e PGID=0 \
 	-e PUID=0 \
 	-e TZ=Africa/Johannesburg \
