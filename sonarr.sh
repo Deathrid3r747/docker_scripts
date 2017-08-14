@@ -19,7 +19,7 @@ else
 	-e PUID=0 \
 	-e PGID=0 \
 	-v /dev/rtc:/dev/rtc:ro \
-	$SONARR_CONFIG \
+	-v $SONARR_CONFIG:/config \
 	$SONARR_VOLUMES \
 	--privileged \
 	linuxserver/sonarr

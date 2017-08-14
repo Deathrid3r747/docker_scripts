@@ -16,7 +16,7 @@ docker pull linuxserver/sabnzbd
 	--restart=always \
         --net $SAB_NET \
         --ip $SAB_IP \
-	$SAB_CONFIG \
+	-v $SAB_CONFIG:/config \
 	$SAB_VOLUMES \
 	-e PGID=0 \
 	-e PUID=0 \

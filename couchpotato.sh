@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+source config.conf
 docker pull linuxserver/couchpotato
 
 if docker ps | grep -q "linuxserver/couchpotato"; then
@@ -7,17 +8,18 @@ if docker ps | grep -q "linuxserver/couchpotato"; then
 else
   echo "New image pulled"
   echo "Upgrading container"
-  docker stop couchpotato
-  docker rm couchpotato
+  docker stop $COUCH_NAME
+  docker rm $COUCH_NAME
   docker create \
-    --name=couchpotato \
-    -v /home/Containers/couchpotato:/config \
-    -v /home/Media/Downloads:/downloads \
-    -v /home/Media/Movies:/data/movies \
-    -e PUID=0  \
+	--name=$COUCH_NAME \
+	-v $COUCH_CONFIG:/config \
+	$COUCH_VOLUMES \
+	-e PUID=0  \
 	-e PGID=0 \
 	-e TZ=Africa/Johannesburg \
-    -p 5050:5050 \
+	--net $COUCH_NET \
+	--ip $COUCH_IP \
+	-p $COUCH_PORT:5050 \
     linuxserver/couchpotato
-  docker start couchpotato
+  docker start $COUCH_NAME
 fi

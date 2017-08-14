@@ -18,7 +18,7 @@ else
 	-e PGID=0 \
 	-v /etc/localtime:/etc/localtime:ro \
 	-p $OMBI_PORT:3579 \
-	$OMBI_CONFIG \
+	-v $OMBI_CONFIG:/config \
 	--privileged \
 	linuxserver/ombi
   docker start $OMBI_NAME
