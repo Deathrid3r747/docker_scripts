@@ -6,18 +6,20 @@ if docker ps | grep -q "linuxserver/ombi"; then
 else
   echo "New image pulled"
   echo "Upgrading container"
-  docker stop ombi
-  docker rm ombi
+  docker stop $OMBI_NAME
+  docker rm $OMBI_NAME
   docker create \
-	--name ombi \
+	--name $OMBI_NAME \
 	--restart=always \
+	--net $OMBI_NET \
+	--ip $OMBI_IP \
 	-e TZ=Africa\Johannesburg \
 	-e PUID=0 \
 	-e PGID=0 \
 	-v /etc/localtime:/etc/localtime:ro \
-	-p 3579:3579 \
-	-v /home/Containers/Ombi:/config \
+	-p $OMBI_PORT:3579 \
+	$OMBI_CONFIG \
 	--privileged \
 	linuxserver/ombi
-  docker start ombi
+  docker start $OMBI_NAME
 fi
