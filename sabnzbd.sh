@@ -7,25 +7,22 @@ if docker ps | grep -q "linuxserver/sabnzbd"; then
 else
   echo "New image pulled"
   echo "Upgrading container"
-  docker stop sabnzbd
-  docker rm sabnzbd
+  docker stop $SAB_NAME
+  docker rm $SAB_NAME
   docker create \
-	--name=sabnzbd \
+	--name=$SAB_NAME \
 	--privileged \
 	--restart=always \
-        --net media \
-        --ip 172.18.0.3 \
-        -v /home/Containers/Sabnzbd:/config \
-        -v /drive/ada0:/ada0 \
-        -v /drive/ada1:/ada1 \
-        -v /drive/ada2:/ada2 \
-        -v /drive/ada3:/ada3 \
+        --net $SAB_NET \
+        --ip $SAB_IP \
+	$SAB_CONFIG \
+	$SAB_VOLUMES \
 	-e PGID=0 \
 	-e PUID=0 \
 	-e TZ=Africa/Johannesburg \
-	-p 8080:8080 \
-	-p 9090:9090 \
+	-p $SAB_PORT:8080 \
+	-p $SAB_PORT_SSL:9090 \
 	linuxserver/sabnzbd
-  docker start sabnzbd
+  docker start $SAB_NAME
 fi
 
