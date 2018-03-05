@@ -33,8 +33,6 @@ PHLEX_NAME=phlex
 PHLEX_CONFIG="/mnt/Media/Containers/Phlex"
 PHLEX_NET=media
 PHLEX_IP=172.18.0.6
-PHLEX_PORT1=5666
-PHLEX_PORT2=5667
 
 ##PORTAINER
 PORT_NAME=portainer
@@ -76,11 +74,3 @@ OMBI_NET=media
 OMBI_IP=172.18.0.12
 OMBI_PORT=3579
 OMBI_CONFIG=/mnt/Media/Containers/Ombi 
-
-##PLEXPY
-PLEXPY_NAME=plexpy
-PLEXPY_NET=media
-PLEXPY_port=8181
-PLEXPY_IP=172.18.0.9
-PLEXPY_CONFIG="/mnt/Media/Containers/Plexpy/config"
-PLEXPY_VOLUMES="-v /mnt/Media/Containers/Plexpy/logs:/logs:ro"

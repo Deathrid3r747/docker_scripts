@@ -3,9 +3,9 @@
 source config.conf
 docker pull linuxserver/couchpotato
 
-if docker ps | grep -q "linuxserver/couchpotato"; then
-  echo "Already running latest image"
-else
+#if docker ps | grep -q "linuxserver/couchpotato"; then
+#  echo "Already running latest image"
+#else
   echo "New image pulled"
   echo "Upgrading container"
   docker stop $COUCH_NAME
@@ -14,6 +14,7 @@ else
 	--name=$COUCH_NAME \
 	-v $COUCH_CONFIG:/config \
 	$COUCH_VOLUMES \
+	--privileged \
 	-e PUID=0  \
 	-e PGID=0 \
 	-e TZ=Africa/Johannesburg \
@@ -22,4 +23,4 @@ else
 	-p $COUCH_PORT:5050 \
     linuxserver/couchpotato
   docker start $COUCH_NAME
-fi
+#fi

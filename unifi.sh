@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-docker pull deathrid3r747/unifi
+docker pull linuxserver/unifi
 
-if docker ps | grep -q "deathrid3r747/unifi"; then
+if docker ps | grep -q "linuxserver/unifi"; then
   echo "Already running latest image"
 else
   echo "New image pulled"
@@ -10,18 +10,16 @@ else
   docker stop unifi
   docker rm unifi
   docker create \
-	--name=unifi \
-        --restart=always \
-	-v /opt/docker/unifi:/config \
-	-e PGID=0 \
-	-e PUID=0 \
-	-p 8080:8080 \
-	-p 8081:8081 \
-	-p 8443:8443 \
-	-p 8843:8843 \
-	-p 8880:8880 \
-	--privileged \
-	deathrid3r747/unifi
+    --name=unifi \
+    -v /mnt/Media/Containers/unifi:/config \
+    -e PGID=0 -e PUID=0  \
+    --privileged \
+    -p 8080:8080 \
+    -p 8081:8081 \
+    -p 8443:8443 \
+    -p 8843:8843 \
+    -p 8880:8880 \
+    linuxserver/unifi
   docker start unifi
 fi
 
