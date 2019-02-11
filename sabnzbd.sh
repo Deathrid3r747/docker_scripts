@@ -23,6 +23,7 @@ docker pull linuxserver/sabnzbd
 	-e TZ=Africa/Johannesburg \
 	-p $SAB_PORT:8080 \
 	-p $SAB_PORT_SSL:9090 \
+	-m 2g \
 	linuxserver/sabnzbd
   docker start $SAB_NAME
 #fi

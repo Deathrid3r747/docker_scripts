@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source config.conf
+source /home/server/docker_scripts/config.conf
 docker pull linuxserver/sonarr
 
 if docker ps | grep -q "linuxserver/sonarr"; then

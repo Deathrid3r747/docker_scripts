@@ -15,8 +15,8 @@ else
 	--restart=always \
 	--net $PHLEX_NET \
 	--ip $PHLEX_IP \
-        -p $PHLEX_PORT1:5666 \
-        -p $PHLEX_PORT2:5667 \
+        -p 5666:80 \
+        -p 5667:443 \
 	-e PUID=1000 \
 	-e PGID=1000 \
         -e TZ=Africa/Johannesburg \

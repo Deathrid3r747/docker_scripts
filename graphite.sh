@@ -14,7 +14,7 @@ docker create \
 -p $GRAPHITE_API_PORT:2003 \
 -e PUID=0 \
 -e PGID=0 \
--v /mnt/Media/Containers/Plexpy:/opt/graphite/storage/whisper \
+-v $GRAPHITE_CONFIG:/opt/graphite/storage/whisper \
 --privileged \
 sitespeedio/graphite
 docker start $GRAPHITE_NAME

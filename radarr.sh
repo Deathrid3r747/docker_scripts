@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source config.conf
+source /home/server/docker_scripts/config.conf
 docker pull linuxserver/radarr
 
 #if docker ps | grep -q "linuxserver/radarr"; then
@@ -22,6 +22,7 @@ docker pull linuxserver/radarr
 	-e TZ=Africa/Johannesburg \
 	--privileged \
 	-p $RADARR_PORT:7878 \
+        -m 1g \
 	linuxserver/radarr
   docker start $RADARR_NAME
 #fi

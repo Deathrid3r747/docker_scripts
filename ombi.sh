@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 docker pull linuxserver/ombi
-source config.conf
+source /home/server/docker_scripts/config.conf
 
 if docker ps | grep -q "linuxserver/ombi"; then
   echo "Already running latest image"
