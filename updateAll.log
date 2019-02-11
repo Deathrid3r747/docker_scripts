@@ -1,0 +1,34 @@
+Update Ombi
+Using default tag: latest
+latest: Pulling from linuxserver/ombi
+Digest: sha256:b321044c88916f1a8293be9d2dac89dd9a1d96a10987540adfa75041b62d57d9
+Status: Image is up to date for linuxserver/ombi:latest
+Already running latest image
+Update Organizr
+Using default tag: latest
+latest: Pulling from lsiocommunity/organizr
+Digest: sha256:7c8437bb94285a8c4ff0c90dbb4ff949a6b715e84bc723c9c41de8766ca55bd6
+Status: Image is up to date for lsiocommunity/organizr:latest
+Already running latest image
+Update Radarr
+Using default tag: latest
+latest: Pulling from linuxserver/radarr
+Digest: sha256:44cb77166aceb382b6872bf568051a0d8ddc10b9517cadb34b502e217ed86d7f
+Status: Image is up to date for linuxserver/radarr:latest
+New image pulled
+Upgrading container
+radarr
+radarr
+e0cb94561e83541c64c7e468b651c19f67f6436d61a529540696fe7043f56f77
+radarr
+Update Sonarr
+Using default tag: latest
+latest: Pulling from linuxserver/sonarr
+Digest: sha256:8c434b4530a6840e87befc92ecff80885169aed5b67fc40377864fc902a24053
+Status: Image is up to date for linuxserver/sonarr:latest
+Already running latest image
+Update Unifi
+latest: Pulling from brettm357/unifi
+Digest: sha256:c51d2c6d98b8563053bc9b4e169eeb9e00e86b4f25b94bf3d026fabf92b40429
+Status: Image is up to date for brettm357/unifi:latest
+Already running latest image

@@ -1,0 +1,26 @@
+wget https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download
+mv uc\?id\=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA gdrive-linux-x64
+chmod +x gdrive-linux-x64
+./gdrive-linux-x64 about
+
+./gdrive-linux-x64 mkdir server-config-backup
+./gdrive-linux-x64 list
+./gdrive-linux-x64 upload --parent [folderId] [filename]
+
+zip -rv "/opt/docker_mnt_Media_Containers_mosquitto-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/mosquitto
+zip -rv "/opt/docker_mnt_Media_Containers_organizr-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/organizr
+zip -rv "/opt/docker_mnt_Media_Containers_Radarr-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/Radarr
+zip -rv "/opt/docker_mnt_Media_Containers_Sonarr-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/Sonarr
+zip -rv "/opt/docker_mnt_Media_Containers_Plexpy-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/Plexpy
+zip -rv "/opt/docker_mnt_Media_Containers_Phlex-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/Phlex
+zip -rv "/opt/docker_mnt_Media_Containers_Ombi-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/Ombi
+zip -rv "/opt/docker_mnt_Media_Containers_Sabnzbd-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/Sabnzbd
+zip -rv "/opt/docker_mnt_Media_Containers_Muximux-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/Muximux
+zip -rv "/opt/docker_mnt_Media_Containers_resilio-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/resilio
+zip -rv "/opt/docker_mnt_Media_Containers_grafana-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/grafana
+zip -rv "/opt/docker_mnt_Media_Containers_unifi-$(date +"%Y-%m-%d").zip" /mnt/Media/Containers/unifi
+
+zip -rv "docker_opt_docker_scripts-$(date +"%Y-%m-%d").zip" docker_scripts
+./gdrive-linux-x64 upload --parent 1ORbcEqwEKX12DsmUtE1MjgSrb1Wn6DMu "docker_opt_docker_scripts-$(date +"%Y-%m-%d").zip"
+rm -f "docker_opt_docker_scripts-$(date +"%Y-%m-%d").zip"
+

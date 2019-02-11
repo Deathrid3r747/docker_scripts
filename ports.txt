@@ -1,0 +1,40 @@
+81		graphite
+82		hassio
+83		organizr		-> 80
+443		organizr
+1880		Node-red
+1883		mqtt
+2003		graphite
+3000		grafana
+3478		unifi
+3579		ombi
+6767		Sabnzbd
+6789		unifi
+7878		Radarr
+8080		unifi
+8081		unifi
+8123		hassio
+8443		unifi
+8843		unifi
+8880		unifi
+8989		Sonarr
+9000		portainer
+9090		cockpit
+9092		Sabnzbd
+32400		Plex
+32768		Tautulli 		-> 32000
+
+SONARR_IP=172.18.0.2
+RADARR_IP=172.18.0.3
+SAB_IP=172.18.0.4
+PLEX_IP=172.18.0.5
+PHLEX_IP=172.18.0.6
+PORT_IP=172.18.0.7
+MUX_IP=172.18.0.8
+TAUTULLI_IP=172.18.0.9
+GRAFANA_IP=172.18.0.10
+GRAPHITE_IP=172.18.0.11
+OMBI_IP=172.18.0.12
+HASSIO_IP=172.18.0.13
+MQTT_IP=172.18.0.14
+NODE_RED_IP=172.18.0.15
